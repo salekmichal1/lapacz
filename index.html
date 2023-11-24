@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./src/style.css" />
+    <title>Lapacz</title>
+    <link rel="icon" type="image/png" href="./src/assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__box">
+          <img
+            src="./src/assets/img/header-logo.png"
+            alt="naglowek-logo"
+            class="header__img" />
+          <img
+            src="./src/assets/img/header-text-mobile.svg"
+            alt="naglowek-napis"
+            class="header__text" />
+          <img
+            src="./src/assets/img/header-text-desktop.svg"
+            alt="naglowek-napis"
+            class="header__text--desktop" />
+        </div>
+      </header>
+      <section class="section">
+        <div class="timer">
+          <h2 class="section__header">Startujemy już za:</h2>
+          <div class="timer-container">
+            <div class="tiemr-half">
+              <div class="half-segment">
+                <div class="segment">
+                  <div class="flip-card" data-days-tens>
+                    <p class="top">0</p>
+                    <p class="bottom">0</p>
+                  </div>
+                  <div class="flip-card" data-days-ones>
+                    <p class="top">0</p>
+                    <p class="bottom">0</p>
+                  </div>
+                </div>
+                <p class="segment-title">Dni</p>
+              </div>
+              <div class="half-segment">
+                <div class="segment">
+                  <div class="flip-card" data-hours-tens>
+                    <p class="top">0</p>
+                    <p class="bottom">0</p>
+                  </div>
+                  <div class="flip-card" data-hours-ones>
+                    <p class="top">0</p>
+                    <p class="bottom">0</p>
+                  </div>
+                </div>
+                <p class="segment-title">Godziny</p>
+              </div>
+            </div>
+            <div class="tiemr-half">
+              <div class="half-segment">
+                <div class="segment">
+                  <div class="flip-card" data-minutes-tens>
+                    <p class="top">0</p>
+                    <p class="bottom">0</p>
+                  </div>
+                  <div class="flip-card" data-minutes-ones>
+                    <p class="top">0</p>
+                    <p class="bottom">0</p>
+                  </div>
+                </div>
+                <p class="segment-title">Minuty</p>
+              </div>
+              <div class="half-segment">
+                <div class="segment">
+                  <div class="flip-card" data-seconds-tens>
+                    <p class="top">0</p>
+                    <p class="bottom">0</p>
+                  </div>
+                  <div class="flip-card" data-seconds-ones>
+                    <p class="top">0</p>
+                    <p class="bottom">0</p>
+                  </div>
+                </div>
+                <p class="segment-title">Sekundy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="emotes">
+          <img
+            src="./src/assets/img/phone.png"
+            alt="telefon"
+            class="emotes__phone" />
+          <img
+            src="./src/assets/img/star.png"
+            alt="gwiadka"
+            class="emotes__emote emotes--star" />
+          <img
+            src="./src/assets/img/ball.png"
+            alt="banka"
+            class="emotes__emote emotes--ball" />
+          <img
+            src="./src/assets/img/bell.png"
+            alt="dzwonek"
+            class="emotes__emote emotes--bell" />
+          <img
+            src="./src/assets/img/emo-love-tracer.png"
+            alt="emotka"
+            class="emotes__emote emotes--love-tracer" />
+          <img
+            src="./src/assets/img/emo-happy-tracer.png"
+            alt="emotka"
+            class="emotes__emote emotes--happy-tracer" />
+          <img
+            src="./src/assets/img/emo-santa.png"
+            alt="emotka"
+            class="emotes__emote emotes--santa" />
+          <img
+            src="./src/assets/img/emo-kiss.png"
+            alt="emotka"
+            class="emotes__emote emotes--kiss" />
+          <!-- Icons animation going up -->
+
+          <!-- Animation one -->
+          <img
+            src="./src/assets/img/star.png"
+            alt="gwiadka"
+            class="emotes__emote emotes--star emotes--animation-one" />
+          <img
+            src="./src/assets/img/ball.png"
+            alt="banka"
+            class="emotes__emote emotes--ball emotes--animation-one" />
+          <img
+            src="./src/assets/img/emo-santa.png"
+            alt="emotka"
+            class="emotes__emote emotes--santa emotes--animation-one" />
+
+          <!-- Animation two -->
+          <img
+            src="./src/assets/img/bell.png"
+            alt="dzwonek"
+            class="emotes__emote emotes--bell emotes--animation-two" />
+          <img
+            src="./src/assets/img/emo-kiss.png"
+            alt="emotka"
+            class="emotes__emote emotes--kiss emotes--animation-two" />
+
+          <!-- Animation three -->
+
+          <img
+            src="./src/assets/img/emo-love-tracer.png"
+            alt="emotka"
+            class="emotes__emote emotes--love-tracer emotes--animation-three" />
+          <img
+            src="./src/assets/img/emo-happy-tracer.png"
+            alt="emotka"
+            class="emotes__emote emotes--happy-tracer emotes--animation-three" />
+        </div>
+      </section>
+
+      <footer class="footer">
+        <h2 class="footer__heading">
+          Przygotuj się do akcji, pobierz aplikację<br />
+          Delikatesy Centrum już dziś!
+        </h2>
+
+        <img
+          src="./src/assets/img/appstore.png"
+          alt="appstore-ikona"
+          class="footer__icon" />
+        <img
+          src="./src/assets/img/googleplay.png"
+          alt="googleplay-ikona"
+          class="footer__icon" />
+        <img
+          src="./src/assets/img/appgallery.png"
+          alt="appgallery-ikona"
+          class="footer__icon" />
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <script src="./src/script.js"></script>
+    </div>
+  </body>
+</html>

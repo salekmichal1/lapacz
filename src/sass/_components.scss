@@ -1,0 +1,236 @@
+//////////////////////////////////////////
+/// Timer
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media only screen and (min-width: $rwd-medium) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+  }
+}
+
+.tiemr-half {
+  ///// Change size of the clock
+  font-size: 5.5rem;
+  //////////////////////////////
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 1.6rem;
+
+  @media only screen and (min-width: $rwd-medium) {
+    font-size: 7rem;
+    gap: 5rem;
+  }
+}
+
+.half-segment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  align-items: center;
+}
+
+.segment {
+  display: flex;
+  gap: 0.1em;
+}
+
+.segment-title {
+  font-size: 0.3em;
+  text-transform: uppercase;
+}
+
+.flip-card {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 0.15em;
+  width: 1em;
+  height: 1.8em;
+  background-color: #15451f;
+}
+
+.top {
+  z-index: 3;
+}
+
+.bottom {
+  z-index: 1;
+  position: absolute;
+  transform-origin: top;
+}
+
+.top,
+.bottom {
+  width: 100%;
+}
+
+.top,
+.flip-card .top-flip {
+  overflow: hidden;
+  padding-top: 0.25em;
+  background-color: #14411d;
+  border-top-right-radius: 0.15em;
+  border-top-left-radius: 0.15em;
+  border-bottom: 1px solid transparent;
+  border-image: radial-gradient(
+    189125% 95.51% at 100% 50.01%,
+    #a23d09 0%,
+    rgba(162, 61, 9, 0) 100%
+  );
+
+  border-image-slice: 1;
+  transform: perspective(100px);
+}
+
+.bottom,
+.flip-card .bottom-flip {
+  align-self: center;
+  top: 0.25em;
+  background-color: #15451f;
+  border-bottom-right-radius: 0.1em;
+  border-bottom-left-radius: 0.1em;
+}
+
+.top,
+.bottom,
+.flip-card .top-flip,
+.flip-card .bottom-flip {
+  font-size: 1.2em;
+  text-align: center;
+  height: 0.75em;
+  line-height: 1;
+}
+
+.flip-card .top-flip {
+  z-index: 4;
+  position: absolute;
+  width: 100%;
+  animation: flip-top 250ms ease-in;
+  transform-origin: bottom;
+}
+
+@keyframes flip-top {
+  100% {
+    transform: rotateX(-90deg) translateZ(1px);
+  }
+}
+
+.flip-card .bottom-flip {
+  z-index: 2;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: perspective(100px) rotateX(-90deg) translateZ(10px);
+  animation: flip-bottom 150ms ease-out 250ms;
+  transform-origin: top;
+}
+
+@keyframes flip-bottom {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+//////////////////////////////////////////
+/// Emotes
+
+.emotes {
+  margin-top: 4rem;
+  position: relative;
+
+  &__phone {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__emote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  &--star {
+    width: 4rem;
+    transform: translateX(-150px) translateY(-160px);
+  }
+
+  &--ball {
+    width: 4rem;
+    transform: translateX(-160px) translateY(-90px) rotate(340deg);
+  }
+
+  &--bell {
+    width: 6.5rem;
+    transform: translateX(-210px) translateY(-20px);
+  }
+
+  &--love-tracer {
+    width: 16rem;
+    transform: translateX(-200px) translateY(40px);
+  }
+
+  &--happy-tracer {
+    width: 10rem;
+    transform: translateX(100px) translateY(-130px);
+  }
+
+  &--santa {
+    width: 4.5rem;
+    transform: translateX(150px) translateY(-10px);
+    filter: blur(4px);
+  }
+
+  &--kiss {
+    width: 5rem;
+    transform: translateX(130px) translateY(120px) rotate(20deg);
+  }
+
+  &--animation-one {
+    animation: going-up ease-in forwards 2000ms,
+      wiggle ease-in-out infinite 1000ms;
+  }
+
+  &--animation-two {
+    animation: going-up ease-in forwards 2000ms,
+      wiggle ease-in-out infinite 1000ms;
+    animation-delay: 250ms;
+  }
+
+  &--animation-three {
+    animation: going-up ease-in forwards 3000ms,
+      wiggle ease-in-out infinite 1500ms;
+    animation-delay: 750ms;
+  }
+
+  @keyframes going-up {
+    0% {
+      top: 200%;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      top: -200%;
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  @keyframes wiggle {
+    0% {
+      margin-right: 4rem;
+    }
+    50% {
+      margin-left: 4rem;
+    }
+    100% {
+      margin-right: 4rem;
+    }
+  }
+}

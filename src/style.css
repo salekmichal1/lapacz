@@ -1,0 +1,304 @@
+:root {
+  --coolor-primary: #feee09;
+  --coolor-light: #f6f4f4;
+  --coolor-grey: #525252;
+  --coolor-dark: #000;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./assets/fonts/Gotham-Bold.otf") format("OpenType"), url("./assets/fonts/Gotham-Rounded-Regular.otf") format("OpenType");
+  font-weight: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Gotham";
+  color: var(--coolor-light);
+  background-image: url(/src/assets/img/tree.png), radial-gradient(61.07% 61.07% at 50% 50%, #47ac34 0%, rgba(71, 172, 52, 0) 100%);
+  background-color: #0e4321;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 64em) {
+  .timer-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+  }
+}
+
+.tiemr-half {
+  font-size: 5.5rem;
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 1.6rem;
+}
+@media only screen and (min-width: 64em) {
+  .tiemr-half {
+    font-size: 7rem;
+    gap: 5rem;
+  }
+}
+
+.half-segment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  align-items: center;
+}
+
+.segment {
+  display: flex;
+  gap: 0.1em;
+}
+
+.segment-title {
+  font-size: 0.3em;
+  text-transform: uppercase;
+}
+
+.flip-card {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 0.15em;
+  width: 1em;
+  height: 1.8em;
+  background-color: #15451f;
+}
+
+.top {
+  z-index: 3;
+}
+
+.bottom {
+  z-index: 1;
+  position: absolute;
+  transform-origin: top;
+}
+
+.top,
+.bottom {
+  width: 100%;
+}
+
+.top,
+.flip-card .top-flip {
+  overflow: hidden;
+  padding-top: 0.25em;
+  background-color: #14411d;
+  border-top-right-radius: 0.15em;
+  border-top-left-radius: 0.15em;
+  border-bottom: 1px solid transparent;
+  border-image: radial-gradient(189125% 95.51% at 100% 50.01%, #a23d09 0%, rgba(162, 61, 9, 0) 100%);
+  border-image-slice: 1;
+  transform: perspective(100px);
+}
+
+.bottom,
+.flip-card .bottom-flip {
+  align-self: center;
+  top: 0.25em;
+  background-color: #15451f;
+  border-bottom-right-radius: 0.1em;
+  border-bottom-left-radius: 0.1em;
+}
+
+.top,
+.bottom,
+.flip-card .top-flip,
+.flip-card .bottom-flip {
+  font-size: 1.2em;
+  text-align: center;
+  height: 0.75em;
+  line-height: 1;
+}
+
+.flip-card .top-flip {
+  z-index: 4;
+  position: absolute;
+  width: 100%;
+  animation: flip-top 250ms ease-in;
+  transform-origin: bottom;
+}
+
+@keyframes flip-top {
+  100% {
+    transform: rotateX(-90deg) translateZ(1px);
+  }
+}
+.flip-card .bottom-flip {
+  z-index: 2;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: perspective(100px) rotateX(-90deg) translateZ(10px);
+  animation: flip-bottom 150ms ease-out 250ms;
+  transform-origin: top;
+}
+
+@keyframes flip-bottom {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+.emotes {
+  margin-top: 4rem;
+  position: relative;
+}
+.emotes__phone {
+  display: block;
+  margin: 0 auto;
+}
+.emotes__emote {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.emotes--star {
+  width: 4rem;
+  transform: translateX(-150px) translateY(-160px);
+}
+.emotes--ball {
+  width: 4rem;
+  transform: translateX(-160px) translateY(-90px) rotate(340deg);
+}
+.emotes--bell {
+  width: 6.5rem;
+  transform: translateX(-210px) translateY(-20px);
+}
+.emotes--love-tracer {
+  width: 16rem;
+  transform: translateX(-200px) translateY(40px);
+}
+.emotes--happy-tracer {
+  width: 10rem;
+  transform: translateX(100px) translateY(-130px);
+}
+.emotes--santa {
+  width: 4.5rem;
+  transform: translateX(150px) translateY(-10px);
+  filter: blur(4px);
+}
+.emotes--kiss {
+  width: 5rem;
+  transform: translateX(130px) translateY(120px) rotate(20deg);
+}
+.emotes--animation-one {
+  animation: going-up ease-in forwards 2000ms, wiggle ease-in-out infinite 1000ms;
+}
+.emotes--animation-two {
+  animation: going-up ease-in forwards 2000ms, wiggle ease-in-out infinite 1000ms;
+  animation-delay: 250ms;
+}
+.emotes--animation-three {
+  animation: going-up ease-in forwards 3000ms, wiggle ease-in-out infinite 1500ms;
+  animation-delay: 750ms;
+}
+@keyframes going-up {
+  0% {
+    top: 200%;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: -200%;
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes wiggle {
+  0% {
+    margin-right: 4rem;
+  }
+  50% {
+    margin-left: 4rem;
+  }
+  100% {
+    margin-right: 4rem;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.header {
+  margin: 2rem;
+}
+.header__box {
+  margin: 0 auto;
+  max-width: 35rem;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 64em) {
+  .header__box {
+    max-width: 60rem;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .header__text {
+    display: none;
+  }
+}
+.header__text--desktop {
+  display: none;
+}
+@media only screen and (min-width: 64em) {
+  .header__text--desktop {
+    display: block;
+  }
+}
+
+.section__header {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer {
+  position: relative;
+  margin-top: 2rem;
+  padding-bottom: 3rem;
+}
+.footer__heading {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.6rem;
+  max-width: 25rem;
+}
+.footer__icon {
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */
