@@ -2,7 +2,6 @@
   "name": "lapacz",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass src/sass/main.scss src/style.css -w",
