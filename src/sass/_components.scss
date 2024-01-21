@@ -11,19 +11,29 @@
     justify-content: center;
     gap: 5rem;
   }
+
+  @media only screen and (min-width: $rwd-large) {
+    gap: 6.6rem;
+  }
 }
 
 .tiemr-half {
   ///// Change size of the clock
-  font-size: 5.5rem;
+  font-size: 5.6rem;
   //////////////////////////////
   display: flex;
   gap: 2.5rem;
   margin-bottom: 1.6rem;
 
   @media only screen and (min-width: $rwd-medium) {
-    font-size: 7rem;
+    font-size: 8rem;
     gap: 5rem;
+    margin-bottom: 0;
+  }
+
+  @media only screen and (min-width: $rwd-large) {
+    font-size: 10rem;
+    gap: 6.6rem;
   }
 }
 
@@ -42,6 +52,10 @@
 .segment-title {
   font-size: 0.3em;
   text-transform: uppercase;
+
+  @media only screen and (min-width: $rwd-medium) {
+    font-size: 0.18em;
+  }
 }
 
 .flip-card {
@@ -89,8 +103,8 @@
 
 .bottom,
 .flip-card .bottom-flip {
-  align-self: center;
-  top: 0.25em;
+  bottom: 0;
+  padding-bottom: 1.25em;
   background-color: #15451f;
   border-bottom-right-radius: 0.1em;
   border-bottom-left-radius: 0.1em;
@@ -144,6 +158,10 @@
   margin-top: 4rem;
   position: relative;
 
+  @media only screen and (min-width: $rwd-medium) {
+    display: none;
+  }
+
   &__phone {
     display: block;
     margin: 0 auto;
@@ -192,45 +210,14 @@
   }
 
   &--animation-one {
-    animation: going-up ease-in forwards 2000ms,
-      wiggle ease-in-out infinite 1000ms;
+    animation: going-up ease-in forwards 2000ms, wiggle ease-in-out 2 1000ms;
   }
 
   &--animation-two {
-    animation: going-up ease-in forwards 2000ms,
-      wiggle ease-in-out infinite 1000ms;
-    animation-delay: 250ms;
+    animation: going-up ease-in forwards 3000ms, wiggle ease-in-out 2 1500ms;
   }
 
   &--animation-three {
-    animation: going-up ease-in forwards 3000ms,
-      wiggle ease-in-out infinite 1500ms;
-    animation-delay: 750ms;
-  }
-
-  @keyframes going-up {
-    0% {
-      top: 200%;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      top: -200%;
-      opacity: 0;
-      display: none;
-    }
-  }
-
-  @keyframes wiggle {
-    0% {
-      margin-right: 4rem;
-    }
-    50% {
-      margin-left: 4rem;
-    }
-    100% {
-      margin-right: 4rem;
-    }
+    animation: going-up ease-in forwards 4000ms, wiggle ease-in-out 2 2000ms;
   }
 }

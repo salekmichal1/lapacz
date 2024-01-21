@@ -44,6 +44,10 @@
     font-size: 1.6rem;
     text-align: center;
     margin-bottom: 2rem;
+
+    @media only screen and (min-width: $rwd-medium) {
+      font-size: 2.5rem;
+    }
   }
 }
 
@@ -55,6 +59,13 @@
   margin-top: 2rem;
   padding-bottom: 3rem;
 
+  @media only screen and (min-width: $rwd-medium) {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__heading {
     margin-left: auto;
     margin-right: auto;
@@ -62,6 +73,202 @@
     text-align: center;
     font-size: 1.6rem;
     max-width: 25rem;
+
+    @media only screen and (min-width: $rwd-medium) {
+      display: inline-block;
+      font-size: 3rem;
+      margin: unset;
+      max-width: 46rem;
+    }
+  }
+
+  &__qr-code {
+    display: none;
+
+    @media only screen and (min-width: $rwd-medium) {
+      display: inline-block;
+    }
+  }
+
+  &__emote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+
+    @media only screen and (min-width: $rwd-medium) {
+      display: block;
+    }
+  }
+
+  &--wreath {
+    width: 8rem;
+    transform: translateX(-27rem) translateY(-3rem);
+    filter: blur(2px);
+    z-index: 1;
+  }
+
+  &--star {
+    width: 8rem;
+    transform: translateX(56rem) translateY(-7rem);
+  }
+
+  &--ball {
+    width: 6rem;
+    transform: translateX(-25rem) translateY(-14rem) rotate(-40deg);
+  }
+
+  &--sweet {
+    width: 7rem;
+    transform: translateX(-14rem) translateY(-20rem);
+  }
+
+  &--bell {
+    width: 7rem;
+    transform: translateX(-2rem) translateY(-22rem);
+  }
+
+  &--kiss-tracer {
+    width: 12rem;
+    transform: translateX(18rem) translateY(-26rem);
+  }
+
+  &--happy-1 {
+    width: 6rem;
+    transform: translateX(32rem) translateY(-20rem) rotate(-30deg);
+    filter: blur(3px);
+  }
+
+  &--love-tracer-1 {
+    width: 26rem;
+    transform: translateX(-60rem);
+    z-index: 3;
+  }
+
+  &--kiss-1 {
+    width: 7rem;
+    transform: translateX(-24rem) translateY(10rem) rotate(-20deg);
+  }
+
+  &--shy-1 {
+    width: 10rem;
+    transform: translateX(6rem) translateY(14rem) rotate(20deg);
+  }
+
+  &--love-tracer-2 {
+    width: 16rem;
+    transform: translateX(50rem) translateY(8rem) rotateY(180deg);
+  }
+
+  &--kiss-2 {
+    width: 20rem;
+    transform: translateX(-103rem) translateY(-6rem) rotate(-16deg);
+    filter: blur(6px);
+  }
+
+  &--happy-2 {
+    width: 10rem;
+    transform: translateX(-96rem) translateY(-24rem) rotate(10deg);
+  }
+
+  &--happy-3 {
+    width: 6rem;
+    transform: translateX(-80rem) translateY(-8rem) rotate(-20deg);
+  }
+
+  &--happy-4 {
+    width: 10rem;
+    transform: translateX(-72rem) translateY(6rem) rotate(-20deg);
+  }
+
+  &--santa-1 {
+    width: 10rem;
+    transform: translateX(-62rem) translateY(-16rem);
+    filter: blur(4px);
+  }
+
+  &--shy-2 {
+    width: 8rem;
+    transform: translateX(-82rem) translateY(-22rem);
+  }
+
+  &--christmas-tree-1 {
+    width: 10rem;
+    transform: translateX(-80rem) translateY(16rem);
+  }
+
+  &--shy-3 {
+    width: 12rem;
+    transform: translateX(58rem) translateY(-28rem) rotate(-20deg);
+    filter: blur(4px);
+  }
+
+  &--santa-2 {
+    width: 7rem;
+    transform: translateX(80rem) translateY(-28rem) rotate(-40deg);
+  }
+
+  &--santa-3 {
+    width: 9rem;
+    transform: translateX(67rem) translateY(1rem) rotate(10deg);
+  }
+
+  &--gift-green-1 {
+    width: 7rem;
+    transform: translateX(74rem) translateY(-14rem);
+  }
+
+  &--love-1 {
+    width: 25rem;
+    transform: translateX(82rem) translateY(-14rem) rotateY(180deg);
+    filter: blur(10px);
+  }
+
+  &--animation-one {
+    animation: going-up ease-in forwards 2000ms, wiggle ease-in-out 2 1000ms;
+  }
+
+  &--animation-two {
+    animation: going-up ease-in forwards 3000ms, wiggle ease-in-out 2 1500ms;
+  }
+
+  &--animation-three {
+    animation: going-up ease-in forwards 4000ms, wiggle ease-in-out 2 2000ms;
+  }
+}
+
+.dektop-footer-left-col {
+  display: none;
+
+  @media only screen and (min-width: $rwd-medium) {
+    display: block;
+  }
+
+  &__phone {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.dektop-footer-right-col {
+  @media only screen and (min-width: $rwd-medium) {
+    padding-right: 8rem;
+  }
+}
+
+.desktop-footer-heading-qr {
+  @media only screen and (min-width: $rwd-medium) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    margin-bottom: 2.6rem;
+  }
+}
+
+.desktop-footer-applications {
+  @media only screen and (min-width: $rwd-medium) {
+    width: max-content;
   }
 
   &__icon {
@@ -70,5 +277,15 @@
     margin-right: auto;
     margin-top: 0.5rem;
     display: block;
+    width: fit-content;
+
+    @media only screen and (min-width: $rwd-medium) {
+      margin-top: 0;
+      margin-right: 3rem;
+      display: inline-block;
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
+    }
   }
 }

@@ -32,10 +32,11 @@ $rwd-mobile: 30em; //480px
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 }
 
 body {
+  display: none;
   font-size: 1.6rem;
   font-family: 'Gotham';
   color: var(--coolor-light);
@@ -46,4 +47,30 @@ body {
       rgba(71, 172, 52, 0) 100%
     );
   background-color: #0e4321;
+}
+
+@keyframes going-up {
+  0% {
+    top: 200%;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: -200%;
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    margin-right: 4rem;
+  }
+  50% {
+    margin-left: 4rem;
+  }
+  100% {
+    margin-right: 4rem;
+  }
 }
