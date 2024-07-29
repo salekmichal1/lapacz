@@ -4,7 +4,7 @@ window.onload = function () {
   document.body.style.display = 'block';
 };
 
-const countToDate = new Date('Apr 30, 2024 17:03:00').getTime();
+const countToDate = new Date('Oct 30, 2024 17:03:00').getTime();
 let previousTimeBetweenDates;
 setInterval(() => {
   const currentDate = new Date().getTime();
